@@ -1,0 +1,25 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath "io.ratpack:ratpack-gradle:1.2.0"
+  }
+}
+
+apply plugin: "io.ratpack.ratpack-java"
+apply plugin: "application"
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  runtime "org.slf4j:slf4j-simple:1.7.12"
+  compile "com.google.inject:guice:4.0"
+  compile "io.ratpack:ratpack-guice:1.2.0"
+  compile "org.freemarker:freemarker:2.3.23"
+}
+
+mainClassName = "bpe.service.freemarker.Main"
+applicationDefaultJvmArgs = []
